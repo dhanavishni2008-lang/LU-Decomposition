@@ -28,9 +28,10 @@ STEP3 : Using the pivot=lu_factor(A) andx=lu_solve((lu,pivot),B) , we can find r
 STEP4 : end the program
 
 ## Program:
-REG:212225230287
+~~~ python
 
-NAME:S.UDHAYA
+#Register no:212225230287
+#developed by:S.UDHAYA
 
 (i) To find the L and U matrix:
 
@@ -60,7 +61,7 @@ lu,pivot=lu_factor(A)
 x=lu_solve((lu,pivot),B)
 
 print(x)
-
+~~~
 ## Output:
 <img width="1235" height="594" alt="Screenshot 2026-02-05 163526" src="https://github.com/user-attachments/assets/8d27d974-f7f3-4ece-a4b5-99a6013d8322" />
 
