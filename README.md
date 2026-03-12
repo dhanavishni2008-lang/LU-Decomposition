@@ -28,6 +28,10 @@ STEP3 : Using the pivot=lu_factor(A) andx=lu_solve((lu,pivot),B) , we can find r
 STEP4 : end the program
 
 ## Program:
+REG:212225230287
+
+NAME:S.UDHAYA
+
 (i) To find the L and U matrix:
 
 import numpy as np
