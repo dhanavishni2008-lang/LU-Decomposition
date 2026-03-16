@@ -1,31 +1,72 @@
-# EIGENVALUES-AND-EIGENVECTORS
-## Aim:
-To write a python program to find the Eigenvalues and Eigen Vectors
-## Equipment’s required:
-1. 	Hardware – PCs
-2. 	Anaconda – Python 3.7 Installation / Moodle-Code Runner
-## Algorithm:
-### Step1 :  Import the numpy module to use the built-in functions for calculation.
-### Step 2: Prepare the lists from each linear equations and assign in np.array().
-### Step 3: Using the np.linalg.eig(),  we get two results (first is eigenvalue and second is eigenvector) of the given matrix.
-### Step 4: End the program.
+# LU Decomposition 
+
+## AIM:
+To write a program to find the LU Decomposition of a matrix.
+
+## Equipments Required:
+1. Hardware – PCs
+2. Anaconda – Python 3.7 Installation / Moodle-Code Runner
+
+## Algorithm
+1.FINDING THE 'L' AND 'U' MATRIX :
+STEP1 : Import the numpy module to use the built-in functions for calculation.
+
+STEP2 : Prepare the lists from each linear equations and assign in np.array().
+
+STEP3 :  Using the P,L,U =lu(), we get two results (first is L and second is U) of the given matrix.
+
+STEP4 : end the program
+
+2.FINDING DECOMPOSITION OF THE MATRIX:
+
+STEP1 : Import the numpy module to use the built-in functions for calculation.
+
+STEP2 : Prepare the lists from each linear equations and assign in np.array().
+
+STEP3 : Using the pivot=lu_factor(A) andx=lu_solve((lu,pivot),B) , we can find results  the LU Decomposition of a matrix
+
+STEP4 : end the program
 
 ## Program:
 ~~~ python
-#developed by:DHANAVISHNI M
-#register no:212225040064
 
+#Register no:212225040064
+#developed by:DHANAVISHNI M
+
+(i) To find the L and U matrix:
 
 import numpy as np
 
-A=np.array([[2,-3,0],[2,-5,0],[0,0,3]])
+from scipy.linalg import lu
 
-values,vectors=np.linalg.eig(A)
+a=np.array(eval(input()))
 
-print(f"Eigen values are {values} and Eigen Vectors are {vectors}")
+P,L,U=lu(a)
+
+print(L)
+
+print(U)
+
+(ii) To find the LU Decomposition of a matrix
+import numpy as np
+
+from scipy.linalg import lu_factor,lu_solve
+
+A=np.array(eval(input()))
+
+B=np.array(eval(input()))
+
+lu,pivot=lu_factor(A)
+
+x=lu_solve((lu,pivot),B)
+
+print(x)
 ~~~
 ## Output:
-<img width="889" height="370" alt="Screenshot 2026-02-05 162938" src="https://github.com/user-attachments/assets/3f0b5f73-a66a-47ff-82a4-b86979561e46" />
+<img width="1235" height="594" alt="Screenshot 2026-02-05 163526" src="https://github.com/user-attachments/assets/8d27d974-f7f3-4ece-a4b5-99a6013d8322" />
+
+<img width="995" height="321" alt="Screenshot 2026-02-05 163547" src="https://github.com/user-attachments/assets/c9365987-bdc0-4416-baef-147a62ab64c5" />
 
 ## Result:
-Thus the Eigenvalue and Eigenvector is successfully solved using python program
+Thus the program to find the LU Decomposition of a matrix is written and verified using python programming.
+
